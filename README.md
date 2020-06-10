@@ -168,4 +168,10 @@ Cuando se trabaja en diferentes ramas y lo que busca es juntar dos de ellas para
 git merge nombreRama
 ```
 
+```
+Cambiar tu URL remota de SSH a HTTPS con el comando git remote set-url.
+
+git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+```
+
 
