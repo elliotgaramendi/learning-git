@@ -49,8 +49,6 @@ git log --oneline
 ```
 
 ```
-<<<<<<< HEAD
-=======
 Lista todos los commints de forma gráfica
 
 git log --oneline --graph
@@ -63,7 +61,6 @@ git log --oneline --graph --all
 ```
 
 ```
->>>>>>> develop
 Viajamos a un commit en específico por su código y restauramos los archivos ejemplo: f52f3da
 
 git reset --hard f52f3da
@@ -94,8 +91,6 @@ git branch -d nombreRama
 ```
 
 ```
-<<<<<<< HEAD
-=======
 Cuando se trabaja en diferentes ramas y lo que busca es juntar dos de ellas para que tengan el mismo código. Se emplea el siguiente comando desde la rama principal invocando a la rama que se quiera unir a esta.
 
 git merge nombreRama
@@ -108,7 +103,6 @@ git merge --no-ff develop
 ```
 
 ```
->>>>>>> develop
 Crear un tag
 
 git tag nombreTag -m "versión alpha"
@@ -138,10 +132,6 @@ Mostrar información del tag
 git show nombreTag
 ```
 
-<<<<<<< HEAD
-=======
-
->>>>>>> develop
 ### Repositorio remoto
 #### Para subir nuestro proyecto debemos crear un nuevo repositorio, al momento de la creación nos mostrará una serie de comandos para subir el proyecto.
 
@@ -197,15 +187,6 @@ git clone https://github.com/ElliotXLeo/AprendizajeGit.git
 ```
 
 ```
-<<<<<<< HEAD
-Cuando se trabaja en diferentes ramas y lo que busca es juntar dos de ellas para que tengan el mismo código. Se emplea el siguiente comando desde la rama principal invocando a la rama que se quiera unir a esta.
-
-git merge nombreRama
-```
-
-```
-=======
->>>>>>> develop
 Cambiar tu URL remota de SSH a HTTPS con el comando git remote set-url.
 
 git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
