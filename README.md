@@ -39,7 +39,7 @@ git add --all
 ```
 Captura estado del código y lo almacena en el repositorio local
 
-git commit -m "primer commit"
+git commit -m "Primer commit"
 ```
 
 ```
@@ -105,7 +105,7 @@ git merge --no-ff develop
 ```
 Crear un tag
 
-git tag nombreTag -m "versión alpha"
+git tag nombreTag -m "Versión alpha"
 ```
 
 ```
@@ -123,7 +123,7 @@ git tag -d nombreTags
 ```
 Hacer un tag en un commit anterior ej: f52f3da
 
-git tag -a nombreTag f52f3da -m "version alpha"
+git tag -a nombreTag f52f3da -m "Version alpha"
 ```
 
 ```
