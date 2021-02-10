@@ -1,6 +1,6 @@
 # AprendizajeGit
-Linea de aprendizaje de Git desde 0.
-En este repositorio muestro como voy aprendiendo poco a poco a usar git bash desde 0, espero aprender muchas funcionalidades.
+Aprendizaje de Git desde 0.
+En este repositorio muestro como voy aprendiendo poco a poco los comandos de git bash, espero aprender mucho.
 
 ![alt text](https://miro.medium.com/max/352/1*qR6xp69TZSS9Dv_ZBxTw1w.jpeg)
 
@@ -8,11 +8,11 @@ En este repositorio muestro como voy aprendiendo poco a poco a usar git bash des
 ```
 Brinda ayuda sobre los comandos
 
-git [comandos] help
+git [comandos]* help
 ```
 ### Repositorio local
 ```
-Configura el email y usuario, solo se hace una vez cuando se instala git
+Configura el email y usuario
 
 git config --global user.email elliotgaramendi@gmail.com
 git config --global user.name ElliotXLeo
@@ -37,9 +37,9 @@ git add --all
 ```
 
 ```
-Captura estado del código y lo almacena en el repositorio local
+Captura estado del código y lo almacena en el repositorio local posterior a la agregación de archivos
 
-git commit -m "Primer commit"
+git commit -m "[descripción]"
 ```
 
 ```
@@ -49,25 +49,31 @@ git commit --amend
 ```
 
 ```
-Muestra en una línea de los commit realizados
+Muestra los commit realizados
 
 git log --oneline
 ```
 
 ```
-Lista todos los commints de forma gráfica
+Lista todos los commits de forma gráfica
 
 git log --oneline --graph
 ```
 
 ```
-Lista todos los commints de todas las ramas de forma gráfica
+Lista todos los commits de todas las ramas de forma gráfica tomando como base la rama actual
 
 git log --oneline --graph --all
 ```
 
 ```
-Viajamos a un commit en específico por su código y restauramos los archivos ejemplo: f52f3da
+Cambiamos a un commit en específico por su código. Ejemplo: f52f3da
+
+git checkout f52f3da
+```
+
+```
+Cambiamos a un commit en específico por su código con el objetivo de volver a empezar desde ese punto. Ejemplo: f52f3da
 
 git reset --hard f52f3da
 ```
@@ -85,7 +91,7 @@ git branch
 ```
 
 ```
-Nos movemos de al rama actual a una en específica
+Nos movemos de la rama actual a una específica
 
 git checkout nombreRama
 ```
@@ -103,7 +109,7 @@ git merge nombreRama
 ```
 
 ```
-Permite revisar el historial de los commits, existencia de ramas en forma de flujo gráfico.
+Permite juntar dos ramas, pero mantiene la existencia de cada una de forma que se puede ver un gráfico de ramas.
 
 git merge --no-ff develop
 ```
@@ -142,7 +148,7 @@ git show nombreTag
 #### Para subir nuestro proyecto debemos crear un nuevo repositorio, al momento de la creación nos mostrará una serie de comandos para subir el proyecto.
 
 ```
-Vincular repositorio remoto con repositorio de origen local y subir archivos del repositorio origen local de la rama master
+Vincular repositorio remoto con repositorio de origen local y subir archivos del repositorio origen local al remoto
 
 git remote add origin https://github.com/ElliotXLeo/AprendizajeGit.git
 git push -u origin master
@@ -175,7 +181,7 @@ git push origin nombreRama
 ```
 
 ```
-Cuando realizamos cambios directamente en GitHub, pero no de forma local, es esencial realizar un pull, donde descargaremos los cambios realizados para seguir trabajando normalmente. Es importante estar enlazados remotamente.
+Cuando hay cambios en el repositorio remoto, es esencial realizar un pull, donde descargaremos los cambios realizados para seguir trabajando.
 
 git pull
 ```
@@ -187,7 +193,7 @@ git fetch
 ```
 
 ```
-Cuando un nuevo desarrollador se incorpora al equipo debe tener una copia del código y trabajarlo de forma loca. Para descargar un repositorio completo basta con tomar la url y ejecutar el siguiente comando en alguna carpeta de su computadora.
+Cuando un nuevo desarrollador se incorpora al equipo debe tener una copia del código y trabajarlo de forma local. Para descargar un repositorio completo basta con tomar la url y ejecutar el siguiente comando en alguna carpeta de su computadora.
 
 git clone https://github.com/ElliotXLeo/AprendizajeGit.git
 ```
