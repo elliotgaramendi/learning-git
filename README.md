@@ -43,6 +43,12 @@ git commit -m "[descripción]"
 ```
 
 ```
+Deshace la captura del estado del código
+
+git reset
+```
+
+```
 Abre editor de texto VIM del último commit realizado para poder modificar su nombre y vuelve a realizar el commit, también es útil para adicionar una modificación que se te olvidó en el último commit
 
 git commit --amend
