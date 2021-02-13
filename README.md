@@ -1,6 +1,8 @@
 # AprendizajeGit
 Aprendizaje de Git desde 0.
-En este repositorio muestro como voy aprendiendo poco a poco los comandos de git bash, espero aprender mucho.
+En este repositorio muestro como voy aprendiendo poco a poco los comandos de git bash.
+
+Espero aprender mucho.
 
 ![alt text](https://miro.medium.com/max/352/1*qR6xp69TZSS9Dv_ZBxTw1w.jpeg)
 
@@ -8,7 +10,7 @@ En este repositorio muestro como voy aprendiendo poco a poco los comandos de git
 ```
 Brinda ayuda sobre los comandos
 
-git [comandos]* help
+git <comandos>* help
 ```
 ### Repositorio local
 ```
@@ -25,21 +27,21 @@ git init
 ```
 
 ```
-Ver estado de los archivos no registrados
+Lista el estado de los archivos 
 
 git status
 ```
 
 ```
-Agregar todos los archivos pendientes de cambios
+Agrega todos los archivos pendientes de cambios
 
 git add --all
 ```
 
 ```
-Captura estado del código y lo almacena en el repositorio local posterior a la agregación de archivos
+Captura estado del código y lo almacena en el repositorio local. Posterior a git add *
 
-git commit -m "[descripción]"
+git commit -m "<descripción>"
 ```
 
 ```
@@ -49,13 +51,14 @@ git reset
 ```
 
 ```
-Abre editor de texto VIM del último commit realizado para poder modificar su nombre y vuelve a realizar el commit, también es útil para adicionar una modificación que se te olvidó en el último commit
+Abre un editor de texto con el último commit y vuelve a realizar el commit al salir de este.
+También es útil para adicionar una modificación.
 
 git commit --amend
 ```
 
 ```
-Muestra los commit realizados
+Muestra los commit realizados hasta el momento
 
 git log --oneline
 ```
@@ -73,15 +76,15 @@ git log --oneline --graph --all
 ```
 
 ```
-Cambiamos a un commit en específico por su código. Ejemplo: f52f3da
+Cambia a un commit en específico por su código.
 
-git checkout f52f3da
+git checkout <código>
 ```
 
 ```
-Cambiamos a un commit en específico por su código con el objetivo de volver a empezar desde ese punto. Ejemplo: f52f3da
+Cambiamos a un commit en específico por su código con el objetivo de volver a empezar desde ese punto.
 
-git reset --hard f52f3da
+git reset --hard <código>
 ```
 
 ```
@@ -91,7 +94,7 @@ git branch nombreRama
 ```
 
 ```
-Nos muestra en que rama estamos
+Nos muestra en que rama estamos y lista las demás
 
 git branch
 ```
@@ -109,7 +112,7 @@ git branch -d nombreRama
 ```
 
 ```
-Cuando se trabaja en diferentes ramas y lo que busca es juntar dos de ellas para que tengan el mismo código. Se emplea el siguiente comando desde la rama principal invocando a la rama que se quiera unir a esta.
+Permite juntar dos ramas, desde la rama principal invocando a la rama que se quiera unir a esta.
 
 git merge nombreRama
 ```
@@ -121,19 +124,19 @@ git merge --no-ff develop
 ```
 
 ```
-Crear un tag
+Crea un tag
 
 git tag nombreTag -m "Versión alpha"
 ```
 
 ```
-Listar tags
+Lista tags
 
 git tag
 ```
 
 ```
-Borrar tags
+Borra un tag en específico
 
 git tag -d nombreTags
 ```
@@ -151,15 +154,18 @@ git show nombreTag
 ```
 
 ### Repositorio remoto
-#### Para subir nuestro proyecto debemos crear un nuevo repositorio, al momento de la creación nos mostrará una serie de comandos para subir el proyecto.
+#### Para subir nuestro proyecto debemos crear un repositorio remoto. Al crearlo nos mostrará una serie de comandos para subir el proyecto. Te pedirá el usuario y contraseña de tu cuenta de git si aún no lo registras.
 
 ```
-Vincular repositorio remoto con repositorio de origen local y subir archivos del repositorio origen local al remoto
+Vincular repositorio remoto con repositorio local 
 
 git remote add origin https://github.com/ElliotXLeo/AprendizajeGit.git
-git push -u origin master
+```
 
-Al ejecutar estas líneas de comando te pedirá el usuario y contraseña de tu cuenta de github.
+```
+Subir archivos del repositorio local al remoto
+
+git push -u origin master
 ```
 
 ```
@@ -169,45 +175,49 @@ git remote -v
 ```
 
 ```
-Al ejecutar el comando git push estaremos subiendo todos los cambios locales al servidor remoto de GitHub, ten en cuenta que tienes que estar enlazado con tu repositorio remoto
+Sube todos los cambios locales al servidor remoto de Git.
 
 git push
 ```
 
 ```
-Subir los tags al repositorio remoto, por defecto si creaste un proyecto con diferentes versiones no subirá los tags, para eso tenemos el siguiente comando.
+Sube todos los tags al repositorio remoto,.
 
 git push --tags
 ```
 
 ```
-Hacer push a un repositorio remoto en otras ramas que no sea master
+Hace push a un repositorio remoto en otras ramas que no sea la de por defecto
 
-git push origin nombreRama
+git push origin <nombreRama>
 ```
 
 ```
-Cuando hay cambios en el repositorio remoto, es esencial realizar un pull, donde descargaremos los cambios realizados para seguir trabajando.
+Descarga el contenido desde un repositorio remoto y actualiza el repositorio local en la rama por defecto
 
 git pull
 ```
 
 ```
-Este comando hace la comparación de nuestros archivos locales con los del servidor, si existiera alguna diferencia nos pediría realizar un get pull para realizar un match de nuestros archivos locales.
+Descarga el contenido desde un repositorio remoto y actualiza el repositorio local en una rama específica
+
+git pull origin <rama>
+```
+
+```
+Compara nuestros archivos locales con los del servidor, si existiera alguna diferencia nos pediría realizar un get pull para realizar un match de nuestros archivos locales.
 
 git fetch
 ```
 
 ```
-Cuando un nuevo desarrollador se incorpora al equipo debe tener una copia del código y trabajarlo de forma local. Para descargar un repositorio completo basta con tomar la url y ejecutar el siguiente comando en alguna carpeta de su computadora.
+Clona un repositorio remoto en la rama por defecto
 
 git clone https://github.com/ElliotXLeo/AprendizajeGit.git
 ```
 
 ```
-Cambiar tu URL remota de SSH a HTTPS con el comando git remote set-url.
+Clona un repositorio remoto en una reama específica
 
-git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+git clone --branch <rama> <https://github.com/ElliotXLeo/AprendizajeGit.git>
 ```
-
-
