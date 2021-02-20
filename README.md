@@ -163,6 +163,12 @@ git remote add origin https://github.com/ElliotXLeo/AprendizajeGit.git
 ```
 
 ```
+Cambiar URL del repositorio remoto
+
+$ git remote set-url origin https://github.com/ElliotXLeo/AprendizajeGit.git
+```
+
+```
 Subir archivos del repositorio local al remoto
 
 git push -u origin master
