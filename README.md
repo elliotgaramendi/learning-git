@@ -106,6 +106,18 @@ git checkout nombreRama
 ```
 
 ```
+Crea y nos movemos a la nueva rama
+
+git checkout -b nombreRama
+```
+
+```
+Renombra la rama actual
+
+git branch -m nuevoNombre
+```
+
+```
 Eliminar una rama
 
 git branch -d nombreRama
