@@ -7,235 +7,195 @@ Espero aprender mucho.
 ![alt text](https://miro.medium.com/max/352/1*qR6xp69TZSS9Dv_ZBxTw1w.jpeg)
 
 ## Comandos empleados en el aprendizaje
-```
-Brinda ayuda sobre los comandos
 
+### Brinda ayuda sobre los comandos
+```
 git <comandos>* help
 ```
-### Repositorio local
-```
-Configura el email y usuario
 
+### Repositorio local
+
+#### Configura el email y usuario
+```
 git config --global user.email elliotgaramendi@gmail.com
 git config --global user.name ElliotXLeo
 ```
 
+#### Inicia un nuevo repositorio y crea la carpeta oculta .git
 ```
-Inicia un nuevo repositorio y crea la carpeta oculta .git
-
 git init
 ```
 
+#### Lista el estado de los archivos 
 ```
-Lista el estado de los archivos 
-
 git status
 ```
 
+####  Agrega todos los archivos pendientes de cambios
 ```
-Agrega todos los archivos pendientes de cambios
-
 git add --all
 ```
-
+o
 ```
-Captura estado del código y lo almacena en el repositorio local. Posterior a git add *
+git add .
+```
 
+#### Captura estado del código y lo almacena en el repositorio local. Posterior a git add *
+```
 git commit -m "<descripción>"
 ```
 
+#### Abre un editor de texto con los cambios del último commit y posibles modificaciones y realizar un commit reemplazando al último.
 ```
-Deshace la captura del estado del código
-
-git reset
-```
-
-```
-Abre un editor de texto con el último commit y vuelve a realizar el commit al salir de este.
-También es útil para adicionar una modificación.
-
 git commit --amend
 ```
 
+#### Crea un tag
 ```
-Muestra los commit realizados hasta el momento
-
-git log --oneline
-```
-
-```
-Lista todos los commits de forma gráfica
-
-git log --oneline --graph
+git tag nombreTag -m "Release x.y.z"
 ```
 
+#### Lista tags
 ```
-Lista todos los commits de todas las ramas de forma gráfica tomando como base la rama actual
-
-git log --oneline --graph --all
-```
-
-```
-Cambia a un commit en específico por su código.
-
-git checkout <código>
-```
-
-```
-Cambiamos a un commit en específico por su código con el objetivo de volver a empezar desde ese punto.
-
-git reset --hard <código>
-```
-
-```
-Crea una nueva rama
-
-git branch nombreRama
-```
-
-```
-Nos muestra en que rama estamos y lista las demás
-
-git branch
-```
-
-```
-Nos movemos de la rama actual a una específica
-
-git checkout nombreRama
-```
-
-```
-Crea y nos movemos a la nueva rama
-
-git checkout -b nombreRama
-```
-
-```
-Renombra la rama actual
-
-git branch -m nuevoNombre
-```
-
-```
-Eliminar una rama
-
-git branch -d nombreRama
-```
-
-```
-Permite juntar dos ramas, desde la rama principal invocando a la rama que se quiera unir a esta.
-
-git merge nombreRama
-```
-
-```
-Permite juntar dos ramas, pero mantiene la existencia de cada una de forma que se puede ver un gráfico de ramas.
-
-git merge --no-ff develop
-```
-
-```
-Crea un tag
-
-git tag nombreTag -m "Versión alpha"
-```
-
-```
-Lista tags
-
 git tag
 ```
 
+#### Borra un tag en específico
 ```
-Borra un tag en específico
-
 git tag -d nombreTags
 ```
 
+#### Hace un tag en un commit anterior
 ```
-Hacer un tag en un commit anterior ej: f52f3da
-
-git tag -a nombreTag f52f3da -m "Version alpha"
+git tag -a nombreTag <código> -m "Release x.y.z"
 ```
 
+#### Mostrar información del tag
 ```
-Mostrar información del tag
-
 git show nombreTag
 ```
 
-### Repositorio remoto
-#### Para subir nuestro proyecto debemos crear un repositorio remoto. Al crearlo nos mostrará una serie de comandos para subir el proyecto. Te pedirá el usuario y contraseña de tu cuenta de git si aún no lo registras.
-
+#### Deshace la captura del estado del código
 ```
-Vincular repositorio remoto con repositorio local 
+git reset
+```
 
+#### Muestra los commit realizados hasta el momento
+```
+git log --oneline
+```
+
+#### Lista todos los commits de todas las ramas de forma gráfica tomando como base la rama actual
+```
+git log --oneline --graph --all
+```
+
+#### Cambia a un commit en específico por su código con todos sus cambios.
+```
+git checkout <código>
+```
+
+#### Cambiamos a un commit en específico perdiendo todos los cambios posteriores a este.
+```
+git reset --hard <código>
+```
+
+#### Crea una nueva rama
+```
+git branch nombreRama
+```
+
+#### Nos muestra en que rama estamos y lista las demás
+```
+git branch
+```
+
+####  Nos movemos de la rama actual a una específica
+```
+git checkout nombreRama
+```
+
+#### Crea y nos movemos a la nueva rama
+```
+git checkout -b nombreRama
+```
+
+#### Renombra la rama actual
+```
+git branch -m nuevoNombre
+```
+
+#### Eliminar una rama
+```
+git branch -d nombreRama
+```
+
+#### Permite juntar dos ramas. Trae los cambios de la rama específicada a la rama actual
+```
+git merge nombreRama
+```
+
+#### Permite juntar dos ramas, pero las mantiene. Genera un commit del merge en la rama actual
+```
+git merge --no-ff develop
+```
+
+### Repositorio remoto
+##### Para subir nuestro proyecto debemos crear un repositorio remoto. Al crearlo nos mostrará una serie de comandos para subir el proyecto. Te pedirá el usuario y contraseña de tu cuenta de git si aún no lo registras.
+
+#### Vincular repositorio remoto con repositorio local 
+```
 git remote add origin https://github.com/ElliotXLeo/AprendizajeGit.git
 ```
 
+#### Cambiar URL del repositorio remoto
 ```
-Cambiar URL del repositorio remoto
-
 $ git remote set-url origin https://github.com/ElliotXLeo/AprendizajeGit.git
 ```
 
+#### Nos muestra en que repositorio estamos enlazados remotamente.
 ```
-Subir archivos del repositorio local al remoto
-
-git push -u origin master
-```
-
-```
-Nos muestra en que repositorio estamos enlazados remotamente.
-
 git remote -v
 ```
 
+#### Sube los cambios del repositorio local al remoto y especifica la rama principal
 ```
-Sube todos los cambios locales al servidor remoto de Git.
+git push -u origin <nombreRama>
+```
 
+#### Sube los cambios del repositorio local al remoto de la rama principal
+```
 git push
 ```
 
-```
-Sube todos los tags al repositorio remoto,.
 
-git push --tags
+#### Sube los cambios del repositorio local al remoto de una rama específica
 ```
-
-```
-Hace push a un repositorio remoto en otras ramas que no sea la de por defecto
-
 git push origin <nombreRama>
 ```
 
+#### Sube todos los tags locales al remoto
 ```
-Descarga el contenido desde un repositorio remoto y actualiza el repositorio local en la rama por defecto
+git push --tags
+```
 
+
+#### Descarga los cambios del repositorio remoto y actualiza el local en la rama por defecto
+```
 git pull
 ```
 
+#### Descarga los cambios del repositorio remoto y actualiza el local en una rama específica
 ```
-Descarga el contenido desde un repositorio remoto y actualiza el repositorio local en una rama específica
-
 git pull origin <rama>
 ```
 
+#### Clona un repositorio remoto en la rama por defecto
 ```
-Compara nuestros archivos locales con los del servidor, si existiera alguna diferencia nos pediría realizar un get pull para realizar un match de nuestros archivos locales.
-
-git fetch
-```
-
-```
-Clona un repositorio remoto en la rama por defecto
-
 git clone https://github.com/ElliotXLeo/AprendizajeGit.git
 ```
 
+#### Clona un repositorio remoto en una rama específica
 ```
-Clona un repositorio remoto en una reama específica
-
 git clone --branch <rama> <https://github.com/ElliotXLeo/AprendizajeGit.git>
 ```
