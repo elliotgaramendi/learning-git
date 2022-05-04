@@ -52,7 +52,7 @@ git commit --amend
 
 #### Crea un tag
 ```
-git tag nombreTag -m "Release x.y.z"
+git tag <nombreTag> -m "Release x.y.z"
 ```
 
 #### Lista tags
@@ -62,17 +62,17 @@ git tag
 
 #### Borra un tag en específico
 ```
-git tag -d nombreTags
+git tag -d <nombreTags>
 ```
 
 #### Hace un tag en un commit anterior
 ```
-git tag -a nombreTag <código> -m "Release x.y.z"
+git tag -a <nombreTag> <código> -m "Release x.y.z"
 ```
 
 #### Mostrar información del tag
 ```
-git show nombreTag
+git show <nombreTag>
 ```
 
 #### Deshace la captura del estado del código
@@ -179,6 +179,11 @@ git push origin <nombreRama>
 git push --tags
 ```
 
+#### Eliminar un tag remoto
+```
+git tag -d <nombreTag>
+git push origin :refs/tags/<nombreTag>
+```
 
 #### Descarga los cambios del repositorio remoto y actualiza el local en la rama por defecto
 ```
