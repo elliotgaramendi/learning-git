@@ -10,7 +10,7 @@ Espero aprender mucho.
 
 ### Brinda ayuda sobre los comandos
 ```
-git <comandos>* help
+git help <comandos>*
 ```
 
 ### Repositorio local
@@ -19,6 +19,11 @@ git <comandos>* help
 ```
 git config --global user.email elliotgaramendi@gmail.com
 git config --global user.name ElliotXLeo
+```
+
+#### Lista la configuración del git
+```
+git config --list
 ```
 
 #### Inicia un nuevo repositorio y crea la carpeta oculta .git
