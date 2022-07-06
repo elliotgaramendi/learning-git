@@ -155,7 +155,7 @@ git remote add origin https://github.com/ElliotXLeo/AprendizajeGit.git
 
 #### Cambiar URL del repositorio remoto
 ```
-$ git remote set-url origin https://github.com/ElliotXLeo/AprendizajeGit.git
+git remote set-url origin https://github.com/ElliotXLeo/AprendizajeGit.git
 ```
 
 #### Nos muestra en que repositorio estamos enlazados remotamente.
