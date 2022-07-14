@@ -179,6 +179,11 @@ git push
 git push origin <nombreRama>
 ```
 
+#### Eliminar una rama remota
+```
+git push origin --delete <nombreRama>
+```
+
 #### Sube todos los tags locales al remoto
 ```
 git push --tags
