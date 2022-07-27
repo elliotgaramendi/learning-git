@@ -8,6 +8,11 @@ Espero aprender mucho.
 
 ## Comandos empleados en el aprendizaje
 
+### Brinda la versión de git instalada
+```
+git --version
+```
+
 ### Brinda ayuda sobre los comandos
 ```
 git help <comandos>*
@@ -15,9 +20,13 @@ git help <comandos>*
 
 ### Repositorio local
 
-#### Configura el email y usuario
+#### Configura el email
 ```
 git config --global user.email elliotgaramendi@gmail.com
+```
+
+#### Configura el usuario
+```
 git config --global user.name ElliotXLeo
 ```
 
