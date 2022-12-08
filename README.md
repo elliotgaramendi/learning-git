@@ -27,7 +27,7 @@ git config --global user.email elliotgaramendi@gmail.com
 
 #### Configura el usuario
 ```
-git config --global user.name ElliotXLeo
+git config --global user.name elliotgaramendi
 ```
 
 #### Lista la configuración del git
