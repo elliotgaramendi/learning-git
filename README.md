@@ -94,6 +94,11 @@ git show <nombreTag>
 git reset
 ```
 
+#### Cambiamos a un commit en específico perdiendo todos los cambios posteriores a este.
+```
+git reset --hard <código>
+```
+
 #### Muestra los commit realizados hasta el momento
 ```
 git log --oneline
@@ -104,14 +109,14 @@ git log --oneline
 git log --oneline --graph --all
 ```
 
-#### Cambia a un commit en específico por su código con todos sus cambios.
+#### Cambia a un commit en específico con todos sus cambios
 ```
 git checkout <código>
 ```
 
-#### Cambiamos a un commit en específico perdiendo todos los cambios posteriores a este.
+#### Muestra los cambios dos commits
 ```
-git reset --hard <código>
+git diff <código> <código>
 ```
 
 #### Crea una nueva rama
@@ -154,6 +159,11 @@ git merge nombreRama
 git merge --no-ff develop
 ```
 
+#### Permite traer los commits de otra rama a la rama actual reorganizán los commits
+```
+git rebase main
+```
+
 ### Repositorio remoto
 ##### Para subir nuestro proyecto debemos crear un repositorio remoto. Al crearlo nos mostrará una serie de comandos para subir el proyecto. Te pedirá el usuario y contraseña de tu cuenta de git si aún no lo registras.
 
@@ -181,7 +191,6 @@ git push -u origin <nombreRama>
 ```
 git push
 ```
-
 
 #### Sube los cambios del repositorio local al remoto de una rama específica
 ```
