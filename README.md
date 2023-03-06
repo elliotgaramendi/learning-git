@@ -1,6 +1,6 @@
 # AprendizajeGit
 Aprendizaje de Git desde 0.
-En este repositorio muestro como voy aprendiendo poco a poco los comandos de git bash.
+En este repositorio muestro como voy aprendiendo poco a poco los comandos de git.
 
 Espero aprender mucho.
 
@@ -8,7 +8,7 @@ Espero aprender mucho.
 
 ## Comandos empleados en el aprendizaje
 
-### Brinda la versión de git instalada
+### Muestra la versión de git instalada
 ```
 git --version
 ```
