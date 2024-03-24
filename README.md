@@ -1,4 +1,4 @@
-# AprendizajeGit
+# Aprendizaje de Git
 Aprendizaje de Git desde 0.
 En este repositorio muestro como voy aprendiendo poco a poco los comandos de git.
 
